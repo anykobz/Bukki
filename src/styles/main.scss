@@ -1111,6 +1111,11 @@ padding-right: 102px;
     margin:160px 0;
     flex-basis: 369px;
     display:block;
+    @media(max-width: 710px)
+    {
+
+          padding-top:40px;
+    }
     &-left
      {
       margin-left:137px;
@@ -1161,6 +1166,7 @@ padding-right: 102px;
       display:block;
       height: 28px;
       width: 137px;
+
     }
     &__list
     {
