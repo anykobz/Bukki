@@ -32,7 +32,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-// Add the new slick-theme.css if you want the default styling
+
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 <link rel="stylesheet" href="styles/main.css">
     </head>
@@ -41,8 +41,14 @@
 
       <header>
         <div class="header">
+
+          <div id="burger" class="menu-icon">
+        <span id="burger_line"></span>
+      </div>
+
+
           <a href="" class="header__logo"></a>
-          <ul class="header-list">
+          <ul id="menu" class="header-list">
             <li class="header-list__item"><a href="" class><a href="" class="header-list__link">Home</a></li>
             <li class="header-list__item"><a href="" class="header-list__link">About</a></li>
             <li class="header-list__item"><a href="" class="header-list__link">Contents</a></li>
@@ -82,7 +88,7 @@
              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
                </p>
                <a href="" class="block-text__btn">Buy this book - $15.00 </a>
-               <small>* Some conditions may applicable</small>
+               <div class="block-text__small">* Some conditions may applicable</div>
 
             </div>
           </div>
@@ -475,19 +481,37 @@
 
         @@include("../blocks/modules/header/header.html")
         @@include("../blocks/modules/footer/footer.html")
+
+
+
+
+
         <script src="js/main.js"></script>
         <script src="js/vendor.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
         <script>
+
+
+
+
+
+
         $(document).ready(function(){
         $('.block-slider').slick({dots:true,arrows:false});
-      });
+
         $('#ClickMore').click(function()
       {
         $('#NextContent').fadeIn();
         $('#ClickMore').hide();
-      })
+      });
+
+        $('#burger').click(function(event)
+      {
+        $('#menu, #burger, #burger_line').toggleClass('active');
+
+      });
+      });
         </script>
     </body>
 </html>

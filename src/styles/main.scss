@@ -30,6 +30,80 @@ body
   {
     font-size: 24px;
   }
+
+}
+.menu-icon {
+  //position: absolute;
+  display: none;
+
+  @media(max-width: 760px)
+  {
+    display:block;
+
+  position: absolute;
+    left: 50px;
+    top:51px;
+  //  background: $fon-black;
+  //  width:70px;
+  //  height: 70px;
+    z-index: 3;
+  //  background-color: $color-acent;
+  &.active
+
+  { position: fixed;
+    &::before
+    {
+
+      transform: rotate(-45deg);
+      top:-8px;
+      background-color: $color-acent;
+    }
+    &::after
+    {
+        transform: rotate(45deg);
+        top:-8px;
+        background-color: $color-acent;
+        box-shadow:none;
+  }
+  }
+}
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+ span {
+  display: block;
+
+  width: 50px;
+  height: 6px;
+  background-color: #fff;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0, .2);
+   &.active{transform: scale(0);}}
+
+
+
+&::before,
+&::after
+{
+  content: "";
+  background-color: $light-color;
+  position: absolute;
+  left:0px;
+  width: 50px;
+  height: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0, .2);
+}
+&::before
+{
+  top:-15px;
+
+}
+&::after
+{
+  top:15px;
+
+}
 }
 
 h3
@@ -67,7 +141,9 @@ h3
   @media(max-width:920px)
   {
     flex-direction: column;
+    padding: 50px 15px 80px;
   }
+
 &__logo{
     background-image: url('../img/Logo.svg');
     background-repeat: no-repeat;
@@ -82,10 +158,33 @@ h3
     display: flex;
     justify-content: flex-end;
     font-family: "Open Sans", serif;
-    @media(max-width: 660px)
+    @media(max-width: 760px)
     {
-      flex-flow: wrap;
-    justify-content: center;
+      display: block;
+      position: fixed;
+      z-index: 2;
+
+      width: 100%;
+      height:100%;
+      top: -1000%;
+      text-align: center;
+      padding-top:100px;
+      overflow:hidden;
+      transition: all 0.3s;
+      background-color: $fon-black;
+      font-size: 45px;
+      &.active
+      {
+        display: block;
+        transition: all 0.3s;
+        position: fixed;
+
+        z-index: 2;
+        width: 100%;
+        height:100%;
+        top: 0;
+        left:0;
+      }
     }
     &__link
     {
@@ -93,9 +192,20 @@ h3
       text-decoration: none;
       letter-spacing: 0.05em;
       font-size: 16px;
+      @media(max-width: 760px)
+      {
+        overflow: hidden;
+        font-size: 35px;
+        margin-top: 20px;
+      }
     }
     &__item
     {
+      @media(max-width: 760px)
+      {
+        font-size: 35px;
+        margin-top: 20px;
+      }
       border-bottom:3px solid transparent;
       margin-left:16px;
       padding-bottom: 5px;
@@ -104,7 +214,9 @@ h3
         {
 
           border-bottom:3px solid $color-acent;
+
         }
+
         &:hover
         {
             border-bottom:3px solid $color-acent;
@@ -216,7 +328,9 @@ h3
     box-shadow: 0px 2px 0px 0px #b2f1be;
     margin-bottom: 256px;
   }*/
-}
+
+  }
+
 //-----------------------end главный блок----------------------------
 
 //------------------------ start текстовый блок----------------------
@@ -231,7 +345,16 @@ h3
   @media(max-width: 1110px)
   {
 
-
+    margin: 0 auto;
+    padding:10px;
+  }
+  &__small
+  {
+  font-size: 80%;
+    @media(max-width: 1110px)
+    {
+          text-align: center;
+    }
   }
     &__name
     {
@@ -376,6 +499,8 @@ padding-right: 102px;
 {
   flex-direction: column-reverse;
   align-items: center;
+  padding:0;
+  margin:0 auto;
 
 }
   &-demo
@@ -662,6 +787,7 @@ padding-right: 102px;
   {
     display:none;
     position: relative;
+    margin-bottom: 50px;
     &::before
     {
       content:"";
@@ -1108,8 +1234,11 @@ min-height: 694px;
   }
   p {
     font-family: "Open Sans", serif;
+    max-width: 740px;
+    margin:0 auto;
+    margin-top: 43px;
+    color: #9191b5;
     letter-spacing: 0.05em;
-    color: $text-darck-color;
   }
 }
 // ---------------------SLIDER END-----------------
