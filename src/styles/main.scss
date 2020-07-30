@@ -361,7 +361,7 @@ h3
        font-family: "Open Sans", serif;
        font-size:18px;
        margin-bottom: 36.6px;
-       @media(max-width: 760px)
+       @media(max-width: 1110px)
        {
 
          text-align: center;
@@ -384,7 +384,7 @@ h3
       font-weight: 700;
       line-height: 50px;
       text-align: left;
-      @media(max-width: 760px)
+      @media(max-width: 1110px)
       {
         text-align: center;
 
@@ -501,6 +501,7 @@ padding-right: 102px;
   align-items: center;
   padding:0;
   margin:0 auto;
+  padding: 40px 0;
 
 }
   &-demo
@@ -566,6 +567,12 @@ padding-right: 102px;
   margin-top: 383px;
   display: flex;
   justify-content: space-between;
+  @media(max-width: 1110px)
+  {
+
+    margin-top: 80px;
+
+  }
 @media(max-width: 760px)
 {
   flex-direction: column-reverse;
@@ -635,6 +642,7 @@ padding-right: 102px;
     letter-spacing: 0.04em;
     @media(max-width: 750px)
     {
+
       margin-bottom: 80px;
     }
   }
@@ -997,6 +1005,10 @@ padding-right: 102px;
   &__item
   {
    width:551px;
+   @media(max-width: 1190px)
+   {
+     width:auto;
+   }
   }
   &__title
   {
@@ -1046,6 +1058,11 @@ padding-right: 102px;
   //  padding-bottom: 16px;
   //  padding-left: 28px;
     padding: 16px 28px;
+    @media(max-width: 1190px)
+    {
+
+          margin: 0 auto;
+    }
     &:focus{
       outline:none;
     }
@@ -1083,6 +1100,11 @@ padding-right: 102px;
   &-block{
     display:flex;
   //  justify-content: space-between;
+  @media(max-width: 710px)
+  {
+
+        display: block;
+  }
   }
   &-item
   {
@@ -1092,11 +1114,21 @@ padding-right: 102px;
     &-left
      {
       margin-left:137px;
+      @media(max-width: 710px)
+      {
+
+            margin-left:0px;
+      }
     }
     &-right
     {
       align:right;
       margin-left: 80px;
+      @media(max-width: 710px)
+      {
+
+            margin-left:0px;
+      }
     }
     &__title
     {
